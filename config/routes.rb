@@ -1,6 +1,6 @@
 AlexMizzouScraper::Application.routes.draw do
   resources :addresses
-
+  match "/scrape" => "addresses#scrape"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -26,7 +26,7 @@ AlexMizzouScraper::Application.routes.draw do
   #       get 'sold'
   #     end
   #   end
-
+  
   # Sample resource route with sub-resources:
   #   resources :products do
   #     resources :comments, :sales
