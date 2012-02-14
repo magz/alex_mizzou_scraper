@@ -11,10 +11,10 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120214024144) do
+ActiveRecord::Schema.define(:version => 20120214053028) do
 
   create_table "addresses", :force => true do |t|
-    t.string   "encoded_address"
+    t.text     "encoded_address", :limit => 255
     t.string   "key"
     t.datetime "created_at"
     t.datetime "updated_at"

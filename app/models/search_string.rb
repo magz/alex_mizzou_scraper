@@ -37,7 +37,7 @@ class SearchString < ActiveRecord::Base
           
     def self.scrape
       url=URI.parse("http://www.missouri.edu/PF/pf.cgi")
-      SearchString.where(:completed => nil).limit(1000).each do |ss|
+      SearchString.where(:completed => nil).limit(10000).each do |ss|
             
                 post_args = {"first_name" => ss.first_name + "*", "last_name" => ss.last_name + "*"}
                 puts post_args
