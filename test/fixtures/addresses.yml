@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  encoded_address: MyString
+  key: MyString
+
+two:
+  encoded_address: MyString
+  key: MyString

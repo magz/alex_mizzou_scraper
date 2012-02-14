@@ -1,0 +1,21 @@
+<% javascript_include_tag "decrypter"%>
+<p id="notice"><%= notice %></p> 
+
+<p>
+  <b>Encoded address:</b>
+  <%= @address.encoded_address %>
+</p>
+
+<p>
+  <b>Key:</b>
+  <%= @address.key %>
+</p>
+
+result = <script> 
+str = "<%= @address.encoded_address %>".slice(6,-6);
+key = "<%= @address.key %>".slice(6,-6);
+document.write(decrypt(str, key)); 
+</script>
+
+<%= link_to 'Edit', edit_address_path(@address) %> |
+<%= link_to 'Back', addresses_path %>
